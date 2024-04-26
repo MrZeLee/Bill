@@ -6,3 +6,5 @@
 - [sudo apt-get install apt-transport-https ca-certificates gnupg](https://cloud.google.com/sdk/docs/install?hl=pt-br)
 
 ## Run
+
+gcloud auth application-default login
