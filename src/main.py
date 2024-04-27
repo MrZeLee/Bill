@@ -37,6 +37,10 @@ service_account_file = os.getenv("SERVICE_ACCOUNT_FILE")
 if service_account_file is None:
     raise ValueError("Please set the SERVICE_ACCOUNT_FILE environment variable.")
 
+# Check if the file exists
+if not os.path.exists(service_account_file):
+    raise FileNotFoundError("The service account file does not exist.")
+
 credentials = service_account.Credentials.from_service_account_file(service_account_file)
 
 def detect_text(path):
